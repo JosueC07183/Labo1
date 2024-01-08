@@ -60,7 +60,7 @@ void main(void) {
     unsigned int ran_2 = 0;
     unsigned int cont_num = 0; 
     unsigned int cont_bolas = 0;
-    unsigned int tiempo = 0;
+    unsigned int tiempo = 1;
 
     do {
         ran_1 ++;
@@ -74,23 +74,82 @@ void main(void) {
             ran_2 ++;
             delay(tiempo);
         }
-        ran_1 = (random >= 10) ? 0 : ran_1;
-        ran_2 = (random2 >= 10) ? 0 : ran_2;
+        ran_1 = (ran_1 >= 10) ? 0 : ran_1;
+        ran_2 = (ran_2 >= 10) ? 0 : ran_2;
         if(boton!=1){
             cont_num +=(cont_bolas==1) ? 1:0;
             cont_bolas = 0;
-            num_1 = unsigned int ran_1;
-            num_2 = unsigned int ran_2;
+            num_1 = (unsigned int)(ran_1);
+            num_2 = (unsigned int)(ran_2);
         }
         if(cont_num==10){
-// Llamado de la función, aún en desarrollo.
+            unsigned int time = 30;
+			unsigned int time_2 = 5;
+// Primer parpadeo
+			for (int i = 0; i < time; i++)
+			{
+				mostrar_num(9,0);
+				delay(tiempo);
+				mostrar_num(9,1);
+				delay(tiempo);
+				
+			}
+//Complemento del parpadeo
+			for (int i = 0; i < time_2; i++)
+			{
+				mostrar_num(0,0);
+				delay(tiempo);
+				mostrar_num(0,1);
+				delay(tiempo);
+				
+			}
+// Segundo parpadeo
+			for (int i = 0; i < time; i++)
+			{
+				mostrar_num(9,0);
+				delay(tiempo);
+				mostrar_num(9,1);
+				delay(tiempo);	
+			}
+//Complemento del parpadeo
+			for (int i = 0; i < time_2; i++)
+			{
+				mostrar_num(0,0);
+				delay(tiempo);
+				mostrar_num(0,1);
+				delay(tiempo);	
+			}
+// Tercer parpadeo
+			for (int i = 0; i < time; i++)
+			{
+				mostrar_num(9,0);
+				delay(tiempo);
+				mostrar_num(9,1);
+				delay(tiempo);	
+			}
+//Complemento del parpadeo
+			for (int i = 0; i < time_2; i++)
+			{
+				mostrar_num(0,0);
+				delay(tiempo);
+				mostrar_num(0,1);
+				delay(tiempo);	
+			}
+			for (int i = 0; i < time; i++)
+			{
+				mostrar_num(9,0);
+				delay(tiempo);
+				mostrar_num(9,1);
+				delay(tiempo);	
+			}
+// Reinicio del juego, los valores de los display y el contador son 0.
             num_1 = 0;
             num_2 = 0;
             cont_num = 0; // Acá se reinicia el juego.
 
         }
 
-    }while (1)
+    }while (1);
 }
 /**
  * @brief Esta función muestra el número aleatorio en los display de 7 segmentos. Se toma el
@@ -195,3 +254,4 @@ void delay(unsigned int tiempo) {
     for (i = 0; i < tiempo; i++)
         for (j = 0; j < 1275; j++);
 }
+

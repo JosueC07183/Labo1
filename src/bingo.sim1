@@ -1,0 +1,87 @@
+<circuit version="1.0.0-SR1" rev="1448" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Push" CircId="Push-25" mainComp="false" Show_id="false" Show_Val="false" Pos="660,804" rotation="810" hflip="1" vflip="1" label="Push-25" idLabPos="-12,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Polos" />
+
+<item itemtype="Resistor" CircId="Resistor-159" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="688,772" rotation="0" hflip="1" vflip="1" label="Resistor-159" idLabPos="-16,-24" labelrot="0" valLabPos="-11,-15" valLabRot="0" Resistance="20 Ω" />
+
+<item itemtype="Capacitor" CircId="Capacitor-160" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="720,800" rotation="90" hflip="1" vflip="1" label="Capacitor-160" idLabPos="-16,-24" labelrot="0" valLabPos="-8,7" valLabRot="0" Capacitance="10 pF" Resistance="1e-06 Ω" InitVolt="0 V" AutoStep="0 _Pasos" />
+
+<item itemtype="Ground" CircId="Ground-174" mainComp="false" Show_id="false" Show_Val="false" Pos="660,864" rotation="0" hflip="1" vflip="1" label="Ground-174" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Resistor" CircId="Resistor-338" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="660,740" rotation="90" hflip="1" vflip="1" label="Resistor-338" idLabPos="-16,-24" labelrot="0" valLabPos="-7,4" valLabRot="0" Resistance="40 Ω" />
+
+<item itemtype="Seven Segment" CircId="Seven Segment-643" mainComp="false" Show_id="false" Show_Val="false" Pos="956,764" rotation="0" hflip="1" vflip="1" label="Seven Segment-643" idLabPos="20,-44" labelrot="0" valLabPos="-16,20" valLabRot="0" NumDisplays="2 _7seg" Color="Green" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="0.02 A" Resistance="1 Ω" />
+
+<item itemtype="BcdTo7S" CircId="BcdTo7S-666" mainComp="false" Show_id="false" Show_Val="false" Pos="852,764" rotation="0" hflip="1" vflip="1" label="BcdTo7S-666" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Inverted="false" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" Tpd_ps="10000 ps" Tr_ps="3000 ps" Tf_ps="4000 ps" />
+
+<item itemtype="Buffer" CircId="Buffer-817" mainComp="false" Show_id="false" Show_Val="false" Pos="980,848" rotation="720" hflip="1" vflip="1" label="Buffer-817" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Tristate="false" Inverted="true" Open_Collector="false" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" initHigh="false" Tpd_ps="10000 ps" Tr_ps="3000 ps" Tf_ps="4000 ps" />
+
+<item itemtype="Battery" CircId="Battery-902" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="644,680" rotation="180" hflip="1" vflip="1" label="Battery-902" idLabPos="-18,-22" labelrot="0" valLabPos="-7,-22" valLabRot="0" Voltage="5 V" Resistance="1e-14 Ω" />
+
+<item itemtype="Ground" CircId="Ground-904" mainComp="false" Show_id="false" Show_Val="false" Pos="612,704" rotation="0" hflip="1" vflip="1" label="Ground-904" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Ground" CircId="Ground-945" mainComp="false" Show_id="false" Show_Val="false" Pos="720,848" rotation="0" hflip="1" vflip="1" label="Ground-945" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Ground" CircId="Ground-1105" mainComp="false" Show_id="false" Show_Val="false" Pos="804,712" rotation="90" hflip="1" vflip="1" label="Ground-1105" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="MCU" CircId="p12F675-1142" mainComp="false" Show_id="false" Show_Val="false" Pos="760,740" rotation="0" hflip="1" vflip="1" label="p12F675-1142" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="4 MHz" Program="../../datos/Documentos/III_Ciclo_2023/Lab 1/Bingo/bingo.hex" Auto_Load="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" />
+
+<item itemtype="Node" CircId="Node-1108" mainComp="false" Pos="660,772" />
+
+<item itemtype="Node" CircId="Node-1148" mainComp="false" Pos="720,772" />
+
+<item itemtype="Node" CircId="Node-1195" mainComp="false" Pos="964,848" />
+
+<item itemtype="Connector" uid="connector-1223" startpinid="Capacitor-160-rPin" endpinid="Ground-945-Gnd" pointList="720,816,720,832" />
+
+<item itemtype="Connector" uid="connector-1224" startpinid="Battery-902-lPin" endpinid="Resistor-338-lPin" pointList="660,680,660,724" />
+
+<item itemtype="Connector" uid="connector-1225" startpinid="Battery-902-rPin" endpinid="Ground-904-Gnd" pointList="628,680,612,680,612,688" />
+
+<item itemtype="Connector" uid="connector-1226" startpinid="BcdTo7S-666-in4" endpinid="Ground-1105-Gnd" pointList="844,724,844,712,820,712" />
+
+<item itemtype="Connector" uid="connector-1227" startpinid="Resistor-338-rPin" endpinid="Node-1108-0" pointList="660,756,660,772" />
+
+<item itemtype="Connector" uid="connector-1228" startpinid="Push-25-pinP0" endpinid="Node-1108-1" pointList="660,788,660,772" />
+
+<item itemtype="Connector" uid="connector-1229" startpinid="Node-1108-2" endpinid="Resistor-159-lPin" pointList="660,772,672,772" />
+
+<item itemtype="Connector" uid="connector-1230" startpinid="Push-25-switch0pinN" endpinid="Ground-174-Gnd" pointList="660,820,660,848" />
+
+<item itemtype="Connector" uid="connector-1231" startpinid="BcdTo7S-666-in0" endpinid="p12F675-1142-PORTP0" pointList="828,756,800,756" />
+
+<item itemtype="Connector" uid="connector-1232" startpinid="p12F675-1142-PORTP1" endpinid="BcdTo7S-666-in1" pointList="800,764,828,764" />
+
+<item itemtype="Connector" uid="connector-1233" startpinid="BcdTo7S-666-in2" endpinid="p12F675-1142-PORTP2" pointList="828,772,800,772" />
+
+<item itemtype="Connector" uid="connector-1234" startpinid="BcdTo7S-666-in3" endpinid="p12F675-1142-PORTP4" pointList="828,780,828,804,744,804,744,764,752,764" />
+
+<item itemtype="Connector" uid="connector-1235" startpinid="p12F675-1142-PORTP3" endpinid="Node-1148-1" pointList="752,772,720,772" />
+
+<item itemtype="Connector" uid="connector-1236" startpinid="Node-1148-2" endpinid="Capacitor-160-lPin" pointList="720,772,720,784" />
+
+<item itemtype="Connector" uid="connector-1237" startpinid="Buffer-817-out" endpinid="Seven Segment-643-pin_commonb" pointList="996,848,996,796" />
+
+<item itemtype="Connector" uid="connector-1238" startpinid="p12F675-1142-PORTP5" endpinid="Node-1195-0" pointList="752,756,736,756,736,848,964,848" />
+
+<item itemtype="Connector" uid="connector-1239" startpinid="Seven Segment-643-pin_commona" endpinid="Node-1195-1" pointList="964,796,964,848" />
+
+<item itemtype="Connector" uid="connector-1240" startpinid="Node-1195-2" endpinid="Buffer-817-in0" pointList="964,848,964,848" />
+
+<item itemtype="Connector" uid="connector-1241" startpinid="BcdTo7S-666-out1" endpinid="Seven Segment-643-pin_b" pointList="876,748,932,748" />
+
+<item itemtype="Connector" uid="connector-1242" startpinid="Seven Segment-643-pin_c" endpinid="BcdTo7S-666-out2" pointList="932,756,876,756" />
+
+<item itemtype="Connector" uid="connector-1243" startpinid="BcdTo7S-666-out3" endpinid="Seven Segment-643-pin_d" pointList="876,764,932,764" />
+
+<item itemtype="Connector" uid="connector-1244" startpinid="Seven Segment-643-pin_e" endpinid="BcdTo7S-666-out4" pointList="932,772,876,772" />
+
+<item itemtype="Connector" uid="connector-1245" startpinid="BcdTo7S-666-out5" endpinid="Seven Segment-643-pin_f" pointList="876,780,932,780" />
+
+<item itemtype="Connector" uid="connector-1246" startpinid="Resistor-159-rPin" endpinid="Node-1148-0" pointList="704,772,720,772" />
+
+<item itemtype="Connector" uid="connector-1247" startpinid="Seven Segment-643-pin_a" endpinid="BcdTo7S-666-out0" pointList="932,740,876,740" />
+
+<item itemtype="Connector" uid="Connector-1250" startpinid="Seven Segment-643-pin_g" endpinid="BcdTo7S-666-out6" pointList="932,788,876,788" />
+
+</circuit>

@@ -13,7 +13,7 @@
 #include <pic14/pic12f675.h>
 #define boton GP3 // Este botón gira la tombola y muestra el número aleatorio.
 typedef unsigned int word;
-word __at 0x2007 __CONFIG = (_MCLRE_OFF & _WDT_OFF & _BODEN_OFF);
+word __at 0x2007 __CONFIG = (_MCLRE_OFF & _WDT_OFF);
 
 /**
  * @brief Aquí están los prototipos de las funciones.
@@ -70,7 +70,7 @@ void main(void) {
             mostrar_num(num_1,0);
             ran_2 ++;
             delay(tiempo);
-            mostrar_num(num_2,0);
+            mostrar_num(num_2,1);
             ran_2 ++;
             delay(tiempo);
         }
@@ -79,8 +79,8 @@ void main(void) {
         if(boton!=1){
             cont_num +=(cont_bolas==1) ? 1:0;
             cont_bolas = 0;
-            num_1 = (unsigned int)(ran_1);
-            num_2 = (unsigned int)(ran_2);
+            num_2 = (unsigned int)(ran_1);
+            num_1 = (unsigned int)(ran_2);
         }
         if(cont_num==10){
             unsigned int time = 30;

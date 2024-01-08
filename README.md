@@ -13,3 +13,4 @@ Este el primer laboratorio del curso IE0624, donde se desarrolla un bingo circui
    2. Con el .hex listo, abrir el archivo *bingo.sim1* con SimulIDE y hacer click derecho sobre el PIC12F675, luego cargar firmware y seleccionar el .hex generado con el makefile.
    3. Hecho esto, ya es posible jugar bingo.
    4. Por último, para limpiar el directorio `src` basta con escribir `make clean` en la terminal.
+2. En el directorio `informe` encontrará el reporte de este laboratorio.

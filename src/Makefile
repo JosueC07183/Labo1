@@ -7,11 +7,18 @@ TARGET=bingo
 
 SRCS = bingo.c
 
-all:
+all: build doxygen run
+
+build:
 	${CC} --use-non-free ${FAMILY} ${MCU} ${CFLAGS} -o ${TARGET} ${SRCS}
-#	${LD} -o ${TARGET}.elf ${TARGET}.o
-#	${OBJCOPY} -j .text -j .data -O ihex ${TARGET}.o ${TARGET}.hex
-#	${SIZE} -C --mcu=${MCU} ${TARGET}.elf
+
+doxygen:
+	doxygen -g
+	doxygen
+
+run:
+	open html/index.html
 
 clean:
-	rm -f *.c~ *.h~ *.o *.elf *.hex *.asm
+	rm -f *.c~ *.h~ *.o *.elf *.hex *.asm *.cod *.lst
+	rm -rf html latex Doxyfile
